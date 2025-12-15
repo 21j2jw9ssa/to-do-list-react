@@ -1,0 +1,25 @@
+@import "makelist.css";
+@import "todolist-buttons.css";
+@import "sort-dropdown.css";
+@import "todolist-style-items.css";
+@import "content-loading.css";
+
+/*******************************/
+/***** LIST BUFFER SECTION *****/
+/*******************************/
+#buffer {
+  border-radius: 10px ;
+  margin-bottom: 20px ;
+}
+
+/*************************************/
+/***** FOR LARGER-SCREENED USERS *****/
+/*************************************/
+@media (max-width: 800px) {
+
+}
+
+noscript {
+  background-color: orange ;
+  font-family: var(--font) ;
+}

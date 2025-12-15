@@ -1,0 +1,139 @@
+/******************************/
+/***** TO-DO LIST BUTTONS *****/
+/******************************/
+.listFunc {
+  font-family: inherit ;
+  cursor: pointer ;
+  color: black ;
+  transition:
+    background-color .1s ease,
+    box-shadow .1s ease ;
+}
+.listFunc:not( [ id="addItem" ] ) {
+  line-height: 25px ;
+  box-sizing: border-box ;
+  display: inline-flex ; /* Make a behave like a flexbox button */
+  align-items: center ;
+  justify-content: center ;
+  font-size: 150% ;
+  height: 72px ;
+  width: 49% ;
+  background-color: var(--bg-colour) ;
+  border-radius: 6.25px ;
+  border-style: none ;
+  padding: 0px 20px ;
+  flex: 1 1 auto ;
+  color: black ;
+}
+.listFunc:hover {
+  background-color: var(--bg-colour-active) ;
+  font-weight: bold ;
+  box-shadow: 0px 0px 10px var(--bg-colour-active) ;
+  color: white ;
+}
+.listFunc:active {
+  box-sizing: border-box ;
+  background-color: white ;
+  font-weight: bold ;
+  box-shadow: 0px 0px 10px var(--bg-colour-active) ;
+
+  border: 4px solid var(--bg-colour) ;
+  color: var(--bg-colour-active) ;
+}
+#deleteList {
+  background-color: var(--bg-colour-warning) ;
+  color: white ;
+  font-weight: bold ;
+}
+#deleteList:hover {
+  background-color: var(--bg-colour-warning-active) ;
+  color: white ;
+  box-shadow: 0px 0px 10px var(--bg-colour-warning-active) ;
+}
+#deleteList:active {
+  background-color: white ;
+  box-shadow: 0px 0px 10px var(--bg-colour-warning-hover) ;
+  border: 4px solid var(--bg-colour-warning) ;
+  color: var(--bg-colour-warning-hover) ;
+}
+
+.btn-container {
+  display: flex ;
+  flex-wrap: wrap ;
+  gap: 5px ;
+  justify-content: center ;
+}
+
+/***********************************************************/
+/***** NEW ITEM INPUT SECTION (WITH 'ADD ITEM' BUTTON) *****/
+/***********************************************************/
+#input-wrapper {
+  padding: 24px 0px ;
+  display: flex ;
+  width: 100% ;
+  margin: auto ;
+}
+#inputItem {
+  flex: 1 ;
+  width: 20% ;
+  padding: 12px 6px ;
+  font-size: inherit ;
+  border: 2px solid #7f7f7f ;
+  border-top-left-radius: 24px ;
+  border-bottom-left-radius: 24px ;
+  border-top-right-radius: 0px ;
+  border-bottom-right-radius: 0px ;
+  outline: none ;
+}
+
+/*********************************************************/
+/***** 'ADD ITEM BUTTON' (INTEGRATED WITH THE INPUT) *****/
+/*********************************************************/
+#addItem {
+  display: flex ; /* key part */
+  align-items: center ; /* vertical centering */
+  justify-content: center ; /* horizontal centering */
+  width: 110px ;
+  padding: 0px 8px ;
+  font-size: 18px ;
+  color: black ;
+  background-color: var(--bg-colour) ;
+  border: 2px solid #7f7f7f ;
+  border-top-right-radius: 24px ;
+  border-bottom-right-radius: 24px ;
+  text-decoration: none ;
+  border-left: none ;
+  cursor: pointer ;
+}
+#addItem:hover {
+  background-color: var(--bg-colour-active) ;
+  color: white ;
+  box-shadow: 0px 0px 10px var(--bg-colour-active) ;
+}
+#addItem:active {
+  background-color: white ;
+  box-shadow: 0px 0px 10px var(--bg-colour-hover) ;
+  border: 4px solid var(--bg-colour) ;
+  color: var(--bg-colour-hover) ;
+}
+
+/**************************************/
+/***** FOR SMALLER-SCREENED USERS *****/
+/**************************************/
+@media (max-width: 650px) {
+  .listFunc:not( [ id="addItem" ] )  {
+    font-size: 125% ;
+    width: 60% ;
+  }
+}
+
+/***************************************/
+/***** FOR DESKTOP/LAPTOP/TV USERS *****/
+/***************************************/
+@media (min-width: 650px) {
+  .listFunc:not( [ id="addItem" ] )  {
+    line-height: 30px ;
+    width: 30% ;
+    flex: 1 1 auto ;
+  }
+}

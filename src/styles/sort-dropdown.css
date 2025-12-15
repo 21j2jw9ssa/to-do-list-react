@@ -1,0 +1,71 @@
+/**************************************/
+/***** DROPDOWN FOR SORTING ITEMS *****/
+/**************************************/
+
+/* Container */
+.dropdown {
+  padding: 10px 0 ;
+  position: relative ;
+  display: inline-block ;
+}
+
+/* Button */
+.dropdown-toggle {
+  background-color: #ffdf7f ;
+  font-family: var(--font) ;
+  border: none ;
+  margin: 0px 0px ;
+  padding: 10px 20px ;
+  font-size: .85em ;
+  cursor: pointer ;
+  border-radius: 8px ;
+  width: fit-content ; /* fit to content */
+  white-space: nowrap ;
+  transition:
+    box-shadow .2s ease,
+    background-color .2s ease ;
+}
+.dropdown-toggle.disabled {
+  cursor: not-allowed ;
+  background-color: #ffefbf ;
+  color: #9f9f9f ;
+}
+.dropdown-toggle:not(.disabled):hover {
+  background-color: #ff8f8f;
+  box-shadow: 0px 0px 20px #ffaf5f ;
+}
+
+/* Menu */
+.dropdown-menu {
+  text-align: left ;
+  position: absolute ;
+  top: 100% ;
+  left: 0 ;
+  background-color: white ;
+  border-radius: 8px ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
+  list-style: none ;
+  padding: 0 ;
+  margin: 0 ;
+  width: max-content ; /* natural width based on content */
+  min-width: 100% ;    /* match button width */
+  font-size: .85em ;
+  white-space: nowrap ;
+  z-index: 100 ;
+}
+
+/* Menu items */
+.dropdown-menu li {
+  padding: 10px ;
+  cursor: pointer ;
+  border-bottom: 1px solid #eee ;
+  transition: background-color 0.1s ease ;
+}
+
+.dropdown-menu li:hover {
+  background: #ffefdf ;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none ;
+}

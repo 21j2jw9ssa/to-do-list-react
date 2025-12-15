@@ -1,0 +1,280 @@
+@import "makelist.css";
+@import "todolist-notice-block.css";
+
+/****************************/
+/***** HELP DESCRIPTION *****/
+/****************************/
+ul {
+  text-align: left ;
+}
+
+.title {
+  font-weight: 600 ;
+}
+
+/**********************/
+/***** HELP GUIDE *****/
+/**********************/
+
+/* TABLE OF CONTENTS */
+#table-of-contents {
+  text-align: center ;
+  background-color: #cfcfcf ;
+  border-radius: 20px ;
+  padding: 0 30px ;
+  font-size: 24px;
+}
+#toc_title {
+  font-size: 32px ;
+  padding: 20px ;
+  font-weight: 600 ;
+}
+#table-of-contents li {
+  text-align: left ;
+  font-size: 18px ;
+  line-height: 2 ;
+}
+#table-of-contents a:hover {
+  color: red ;
+  text-decoration: underline;
+}
+#table-of-contents a:active {
+  text-shadow: 0px 0px 5px orange ;
+  font-weight: 600 ;
+  color: yellow ;
+}
+#contents {
+  border-top: 2px solid gray;
+  padding: 20px 0 ;
+}
+.table-of-contents-subtitle {
+  margin: 0 ;
+  padding: 0 30px ;
+}
+
+/* Subtitle link target height */
+.instruction-section {
+  scroll-margin-top: 100px ;
+}
+/* For 'sort item' subtitles */
+.instructions-item-manipulation,
+.instructions-sort-items-mode {
+  --gap-top: 15px ;
+  padding-top: var(--gap-top) ;
+  scroll-margin-top: 120px ;
+}
+
+/* SUBTITLES */
+/* REACT MODIFICATION */
+/* TO AVOID HYDRATION ERRORS */
+.h3 {
+  padding-top: 30px ;
+  font-weight: 600 ;
+  font-size: 22px;
+}
+.h4 {
+  padding-top: 30px ;
+  font-weight: 600 ;
+  font-size: 18px ;
+}
+
+/* THE "WHAT AN ITEM LOOKS LIKE" SECTION */
+.description-title {
+  font-size: 20px;
+  padding: 10px 0 ;
+  font-weight: 600 ;
+}
+dl > dd {
+  line-height: 1.5 ;
+  padding: 10px 0 ;
+}
+
+/********************************/
+/***** SECTIONS OF ARTICLES *****/
+/********************************/
+ul:not(.table-of-contents-subtitle, .dropdown-menu) {
+  list-style-type: none ;
+  padding: 0 20px ;
+}
+ul:not(.table-of-contents-subtitle, .dropdown-menu) > li {
+  padding-top: 20px ;
+}
+.subtitle {
+  font-weight: 600 ;
+}
+
+/* SAMPLE IMAGES OF DROPDOWN LIST FOR SORTING */
+.image-dropdown {
+  width: 260px ;
+}
+
+/* Google icons */
+i[class="material-symbols-rounded"] {
+  vertical-align: sub ;
+  cursor: auto ;
+  padding: 0 ;
+  margin: 0 3px ;
+}
+/* Google icons in paragraphs */
+i[class="material-symbols-rounded"] > img {
+  vertical-align: sub ;
+  cursor: auto ;
+  padding: 0 ;
+  margin: 0 ;
+}
+/* Google icons in message blocks */
+.important-block i[class="material-symbols-rounded"] {
+  vertical-align: sub ;
+  cursor: auto ;
+  padding: 0 ;
+  margin: 0 3px 0 0 ;
+}
+
+/* Sample item display */
+#instructions .item-card {
+  margin: 0 0 12px ;
+}
+
+/* checkbox of the sample item */
+.sample-checkbox {
+  margin: 0 17px 15px 3px ;
+  vertical-align: middle ;
+}
+.sample-checkbox:hover {
+  cursor: default ;
+}
+.sample-checkbox:is(.first) {
+  margin: 0 15px 15px 0 ;
+}
+
+/*********************************************************/
+/***** INPUT EXAMPLE TABLES (FOR 'ADD ITEM' SECTION) *****/
+/***********************************&*********************/
+table {
+  margin: 20px 0 ;
+  border-collapse: collapse ;
+}
+th, td {
+  padding: 10px ;
+  border: 2px solid gray ;
+  letter-spacing: .5px ;
+}
+th {
+  background-color: var(--bg-colour) ;
+  text-align: center ;
+  font-weight: 600 ;
+}
+/* EVEN ROWS, i.e. 2nd row, 4th row, 6th row, etc. */
+tbody > tr:nth-of-type(even) {
+  background-color: #dfdfdf ;
+}
+p {
+  line-height: 1.5 ;
+}
+
+/**********************************************/
+/***** COMPARABLE TABLES FOR LIST EXAMPLE *****/
+/**********************************************/
+.table-row {
+  display: inline-flex ;
+  flex-wrap: wrap ;
+  gap: 16px ;
+  justify-content: space-between ;
+}
+
+/***************************/
+/***** INDIVIDUAL TABS *****/
+/***************************/
+.tabs {
+  display: flex ;
+  overflow-x: auto ;         /* Enables horizontal scroll */
+  white-space: nowrap ;      /* Prevents wrapping */
+  scrollbar-width: none ;    /* Hides scrollbar in Firefox */
+  -ms-overflow-style: none ; /* Hides scrollbar in IE 10+ */
+  cursor: pointer ;
+  border: 1px solid #ccc ;
+}
+.tab {
+  box-sizing: border-box ;
+  padding: .75em 1em ;
+  display: inline-flex ; /* Make a behave like a flexbox button */
+  align-items: center ;
+  justify-content: center ;
+  text-align: center ;
+  flex: 1 ;
+  background: #eee ;
+  border-left: 1px solid #ccc ;
+}
+.tab:hover {
+  background-color: #dfdfdf ;
+}
+.tab.active {
+  background: #fff ;
+  border-top: 5px solid var(--bg-colour) ;
+  font-weight: bold ;
+  color: var(--bg-colour-active) ;
+}
+.tabs > .tab:nth-of-type(1) {
+  border-left: none ;
+}
+
+/* SECTIONS OF TAB CONTENTS */
+.tab-content {
+  border: 1px solid #ccc ;
+  border-top: none ;
+  padding: 1em ;
+  display: none ;
+}
+.tab-content.active {
+  display: block ;
+}
+
+/******************************************************/
+/***** CODE, FILE CONTENTS, KEYWORDS & FILE TYPES *****/
+/******************************************************/
+kbd {
+  font-size: .8em ;
+  padding: 0px 2px ;
+  border: 2px solid #bfbfbf ;
+  border-radius: 6px ;
+}
+
+code {
+  font-family: "Cascadia Code", Consolas, "Lucida Console", monospace ;
+  line-height: 1.5 ;
+  font-size: .9em ;
+}
+
+code:not(.examples) {
+  padding: .2em ;
+  font-size: .8em ;
+  background-color: #dfdfdf ;
+  border-radius: 6px ;
+}
+
+/*********************************/
+/***** RSD on mobile devices *****/
+/*********************************/
+@media screen and (max-width: 500px) {
+  /* APP TITLE */
+  .title {
+    font-size: 1.6em ;
+  }
+
+  /* TABLE OF CONTENTS */
+  #table-of-contents {
+    padding: 0 20px ;
+  }
+  #table-of-contents li {
+    font-size: 18px ;
+    line-height: 1.75 ;
+  }
+  #toc_title {
+    font-size: 24px ;
+  }
+
+  /* THE "WHAT AN ITEM LOOKS LIKE" SECTION */
+  dd {
+    margin-left: 30px ;
+  }
+}
