@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/to-do-list-react/static/css/main.9e4a8bb1.css",
-    "main.js": "/to-do-list-react/static/js/main.bf7cd774.js",
-    "static/js/453.af3a6e5c.chunk.js": "/to-do-list-react/static/js/453.af3a6e5c.chunk.js",
-    "index.html": "/to-do-list-react/index.html",
-    "main.9e4a8bb1.css.map": "/to-do-list-react/static/css/main.9e4a8bb1.css.map",
-    "main.bf7cd774.js.map": "/to-do-list-react/static/js/main.bf7cd774.js.map",
-    "453.af3a6e5c.chunk.js.map": "/to-do-list-react/static/js/453.af3a6e5c.chunk.js.map"
+    "main.css": "/to-do-list-react/gosh-dick/static/css/main.9e4a8bb1.css",
+    "main.js": "/to-do-list-react/gosh-dick/static/js/main.ff0856d9.js",
+    "static/js/453.af3a6e5c.chunk.js": "/to-do-list-react/gosh-dick/static/js/453.af3a6e5c.chunk.js",
+    "index.html": "/to-do-list-react/gosh-dick/index.html",
+    "main.9e4a8bb1.css.map": "/to-do-list-react/gosh-dick/static/css/main.9e4a8bb1.css.map",
+    "main.ff0856d9.js.map": "/to-do-list-react/gosh-dick/static/js/main.ff0856d9.js.map",
+    "453.af3a6e5c.chunk.js.map": "/to-do-list-react/gosh-dick/static/js/453.af3a6e5c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9e4a8bb1.css",
-    "static/js/main.bf7cd774.js"
+    "static/js/main.ff0856d9.js"
   ]
 }
