@@ -25,23 +25,24 @@ const pageURL = url => `${window.location.href}${url}` ;
 
 // PAGE OBJECTS
 const PAGES = [
-  Page( pageURL("/"),      "Home",  "Homepage",            <TODOLIST_PAGE1_TODOLIST/> ),
-  Page( pageURL("/help"),  "Help",  "How to use MakeList", <TODOLIST_PAGE2_HELP_GUIDE/> ),
-  Page( pageURL("/about"), "About", "About me",            <TODOLIST_PAGE3_ABOUT/> ),
+  Page( "/",      "Home",  "Homepage",            <TODOLIST_PAGE1_TODOLIST/> ),
+  Page( "/help",  "Help",  "How to use MakeList", <TODOLIST_PAGE2_HELP_GUIDE/> ),
+  Page( "/about", "About", "About me",            <TODOLIST_PAGE3_ABOUT/> ),
 ] ; // PAGES
 
 Object.freeze(PAGES) ; // AVOID ANY MUTATIONS
 
-console.log(`Current environment variable: ${process.env.NODE_ENV}`) ;
 console.log(`Current URL: ${process.env.PUBLIC_URL}`) ;
 console.log(`Current full URL: ${window.location.href}`) ;
 console.log(`Current full URL's path name: ${window.location.pathname}`) ;
 console.log(`Current home page: ${pageURL("/")}`) ;
+console.log(`Current help page: ${pageURL("/help")}`) ;
+console.log(`Current about page: ${pageURL("/about")}`) ;
 
 // // By default, show the user the homepage if pathname's not specified
-// if ( window.location.href === jsonData.homepage ) {
-//   window.location.href += "#" + PAGES[0].path ;
-// } // if: by default, direct to the homepage
+if ( window.location.href === jsonData.homepage ) {
+  window.location.href += "#" + PAGES[0].path ;
+} // if: by default, direct to the homepage
 
 /*
 ------------------------>>>
@@ -62,7 +63,7 @@ const ToDoListInterface = function() {
    */
   function UpdateCurPage(path) {
     setCurPage( path ) ;
-    window.location.href = path ;
+    // window.location.href = path ;
   } // UpdateCurPage()
 
   /**
@@ -89,8 +90,8 @@ const ToDoListInterface = function() {
             <Link key={page.title}
                   to={page.path}
                   title={page.titleHovered}
-                  onClick={ () => UpdateCurPage(`https://${window.location.hostname}${window.location.pathname}#${page.path}`) }
-                  className={ curPage === `https://${window.location.hostname}${window.location.pathname}#${page.path}` ? "current-page" : "" }
+                  onClick={ () => UpdateCurPage(page.path) }
+                  className={ curPage.startsWith( page.path ) ? "current-page" : "" }
               >
               {page.title}
             </Link>
