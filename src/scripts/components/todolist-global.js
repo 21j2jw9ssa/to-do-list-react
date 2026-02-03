@@ -32,14 +32,13 @@ const PAGES = [
 
 Object.freeze(PAGES) ; // AVOID ANY MUTATIONS
 
-console.log(`Current URL: ${process.env.PUBLIC_URL}`) ;
 console.log(`Current full URL: ${window.location.href}`) ;
 console.log(`Current full URL's host name: ${window.location.hostname}`) ;
 console.log(`Current full URL's path name: ${window.location.pathname}`) ;
 
 // // By default, show the user the homepage if pathname's not specified
-if ( window.location.href === jsonData.homepage ) {
-  window.location.href += "#" + PAGES[0].path ;
+if ( window.location.href === `${window.location.hostname}${window.location.pathname}` ) {
+  window.location.href = window.location.href.concat( "#", PAGES[0].path ) ;
 } // if: by default, direct to the homepage
 
 console.log(`After redirection URL: ${window.location.href}`) ;
@@ -48,6 +47,7 @@ let curPath = window.location.href ;
 console.log(`Current path: ${curPath}`) ;
 curPath = curPath.replace(`https://${window.location.hostname}${window.location.pathname}`, "") ;
 console.log(`Current path (after): ${curPath}`) ;
+console.log(curPath === "" ? "YESSSS!" : "OOPS.") ;
 
 /*
 ------------------------>>>
@@ -60,7 +60,7 @@ const ToDoListInterface = function() {
   // When opened, it shows the current page the window is on
   // Initially set to the URL of homepage,
   // and changes whenever any tab of the navigation bar gets clicked
-  const [curPage, setCurPage] = useState(curPath) ;
+  const [curPage, setCurPage] = useState( curPath === "" ? PAGES[0].path : curPath ) ;
 
   /**
    * Updates the current page to a specified path
