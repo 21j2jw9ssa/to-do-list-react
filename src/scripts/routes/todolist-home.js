@@ -275,7 +275,18 @@ const TODOLIST_PAGE1_TODOLIST = function() {
    * @param {Number} id ID of the item to be deleted
    */
   function RemoveItem(id) {
-    UpdateItems( { type: LIST_ACTION.REMOVE_ITEM, id: id } ) ;
+    Swal.fire({
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      title: 'Remove item?',
+      html: 'Doing so will remove it and cannot be undone.<br>Would you like to continue?',
+      showCancelButton: true,
+    }).then( async function( wantToDelete ) {
+      if ( wantToDelete.isConfirmed ) {
+        UpdateItems( { type: LIST_ACTION.REMOVE_ITEM, id: id } ) ;
+        // PopUpMsg( "success", "To-do list cleared" ) ;
+      }
+    }) ;
   } // RemoveItem()
 
   function openFile() {
