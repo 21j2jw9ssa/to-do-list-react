@@ -299,7 +299,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
 
   function ExportList() {
     try {
-      if ( ! GetLocalListState() ) throw Error( "NOSS" ) ;
+      if ( GetLocalListState() === null ) throw Error( "NOSS" ) ;
       Swal.fire({
         title: "Enter name to download the list",
         input: "text",
