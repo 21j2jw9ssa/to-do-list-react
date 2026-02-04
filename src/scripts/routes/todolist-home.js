@@ -276,6 +276,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
    */
   function RemoveItem(id) {
     PopUpMsg("error", "FUNNY?") ;
+    console.log("FUNNY?")
     UpdateItems( { type: LIST_ACTION.REMOVE_ITEM, id: id } ) ;
   } // RemoveItem()
 
