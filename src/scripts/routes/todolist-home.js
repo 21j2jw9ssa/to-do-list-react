@@ -263,7 +263,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
    */
   function EditItem(itemToEdit) {
     if ( itemToEdit.content.trim() === "" ) {
-      PopUpMsg("error", "FUNNY?") ;
+      alert("No empty entries is allowed") ;
       return ;
     } // if content is empty (including the one of mere spaces)
 
@@ -275,7 +275,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
    * @param {Number} id ID of the item to be deleted
    */
   function RemoveItem(id) {
-    PopUpMsg(POP) ;
+    PopUpMsg("error", "FUNNY?") ;
     UpdateItems( { type: LIST_ACTION.REMOVE_ITEM, id: id } ) ;
   } // RemoveItem()
 
