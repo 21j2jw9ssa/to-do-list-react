@@ -80,7 +80,6 @@ function ItemCard( { item, onEditItemCtnt, onToggleItem, onRemoveItem } ) {
   } // CheckKeyDownBeforeFinishEditing()
 
   function HandleEditStat() {
-    console.log("SHIT.")
     isEditing ? CancelEditing() : EnableEdit() ; 
   } // HandleEditStat()
 
@@ -132,7 +131,7 @@ function ItemCard( { item, onEditItemCtnt, onToggleItem, onRemoveItem } ) {
         </div>
         <div className="lower-content">
           <div className="material-symbols-rounded" data-type-name="edit"
-               onClick={ () => HandleEditStat() }>
+               onClick={ () => {HandleEditStat(); console.log("FUCK")} }>
             <img height="35" width="35" title="click to edit this item"
                  alt="pen editing the square" src="UI icons/edit_square.svg" />
           </div>
