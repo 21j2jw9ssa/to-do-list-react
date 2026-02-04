@@ -275,6 +275,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
    * @param {Number} id ID of the item to be deleted
    */
   function RemoveItem(id) {
+    alert("SGHIT")
     UpdateItems( { type: LIST_ACTION.REMOVE_ITEM, id: id } ) ;
   } // RemoveItem()
 
