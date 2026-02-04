@@ -80,6 +80,7 @@ function ItemCard( { item, onEditItemCtnt, onToggleItem, onRemoveItem } ) {
   } // CheckKeyDownBeforeFinishEditing()
 
   function HandleEditStat() {
+    console.log("SHIT.")
     isEditing ? CancelEditing() : EnableEdit() ; 
   } // HandleEditStat()
 
