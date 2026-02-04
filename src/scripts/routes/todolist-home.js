@@ -328,7 +328,7 @@ const TODOLIST_PAGE1_TODOLIST = function() {
         } // edition permitted
       }) ;
     } catch ( err ) {
-      console.log(err.type) ;
+      console.log(err) ;
       PopUpMsg( "error", "Failed to save file." ) ;
     } // catch:
   } // ExportList()
